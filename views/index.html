@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>American/British English Translator</title>
+    <meta
+      name="Jordy's FreeCodeCamp American / British English Translator"
+      content="American / British English Translator"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../public/style.css" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        Jordy's FreeCodeCamp American / British English Translator
+      </h1>
+    </header>
+    <div class="container">
+      <div class="form-container">
+          <textarea
+          rows="10"
+          cols="60"
+          id="text-input"
+        ></textarea>
+        <br />
+        <select id="locale-select">
+          <option value="american-to-british">American to British</option>
+          <option value="british-to-american">British to American</option>
+        </select>
+        <input type="button" value="Translate" id="translate-btn" />
+        <input type="button" value="Clear" id="clear-btn" />
+      </div>
+      <div id="output-container">
+        <div id="solution-container">
+          Translated Sentence:
+          <div id="translated-sentence"></div>
+          <div id="error-msg"></div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      Created by <a href="https://www.freecodecamp.org/jordyf">Jordy Ferdian</a>  
+      <button onclick="location.href='https://github.com/jordyf15'" class="fa fa-github fa-lg"></button>
+      <button onclick="location.href='https://www.linkedin.com/in/jordy-ferdian-3606041a7'" class="fa fa-linkedin-square fa-lg"></button><br>
+      For FreeCodeCamp <a href="https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/american-british-translator">
+          American / British Translator</a> project
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  </body>
+  <script src="../public/translator.js" type="module"></script>
+</html>
