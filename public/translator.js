@@ -32,7 +32,7 @@ document.getElementById('translated-sentence').innerHTML="";
 document.getElementById('error-msg').innerHTML='';
 }
 
-function spaceMatcher(translated,key,translation){//this is for americanonly and british only since some words have space in them 
+function spaceMatcher(translated,translation){//this is for americanonly and british only since some words have space in them 
 //which will make the case matcher malfunction
   var result='';
   if(/[^A-Za-z0-9]/.test(translated[0])){
@@ -85,7 +85,7 @@ function americanToBritish(){
     var regResult=reg.exec(input);
     var regKeyResult=regKey.exec(input);
     if(regResult!=null){
-      input=input.replace(reg,'<span class="highlight">'+spaceMatcher(regResult[0],regKeyResult[0],americanOnly[americanOnlyKey])+'</span>');
+      input=input.replace(reg,'<span class="highlight">'+spaceMatcher(regResult[0],americanOnly[americanOnlyKey])+'</span>');
     }
   }
 
@@ -140,7 +140,7 @@ function britishToAmerican(){
     var regResult=reg.exec(input);
     var regKeyResult=regKey.exec(input);
     if(regResult!=null){
-      input=input.replace(reg,'<span class="highlight">'+spaceMatcher(regResult[0],regKeyResult[0],britishOnly[britishOnlyKey])+'</span>');
+      input=input.replace(reg,'<span class="highlight">'+spaceMatcher(regResult[0],britishOnly[britishOnlyKey])+'</span>');
     }
   }
 
